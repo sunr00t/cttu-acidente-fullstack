@@ -1,8 +1,8 @@
 {
-  "name": "adonis-fullstack-app",
+  "name": "cttu-acidente-fullstack",
   "version": "4.1.0",
   "adonis-version": "4.1.0",
-  "description": "The fullstack application boilerplate for Adonisjs",
+  "description": "Atividade de Sistemas Distribuidos - APIRestFull",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -10,13 +10,14 @@
   },
   "keywords": [
     "adonisjs",
-    "adonis-app"
+    "acidente-cttu",
+    "api"
   ],
-  "author": "",
-  "license": "UNLICENSED",
+  "author": "Bruno Nascimento",
+  "license": "MIT",
   "private": true,
   "dependencies": {
-    "@adonisjs/ace": "^6.6.1",
+    "@adonisjs/ace": "^5.0.8",
     "@adonisjs/auth": "^3.0.7",
     "@adonisjs/bodyparser": "^2.0.5",
     "@adonisjs/cors": "^1.0.7",
