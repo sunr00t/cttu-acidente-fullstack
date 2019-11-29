@@ -3,7 +3,9 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-// Route.on('/').render('welcome')
+Route.get('/', () =>{
+  return 'cttu-api-service started: receiving requests! read the documentation at https://documenter.getpostman.com/view/3856777/SVzxZL5G?version=latest'
+})
 
 Route.group(() => {
 /*
