@@ -4,6 +4,7 @@
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 
+
 const Acidente = use('App/Models/Acidente')
 
 class AcidenteController {
@@ -11,9 +12,10 @@ class AcidenteController {
    * Listar Todos os Acidente
    * GET acidentes
    */
-  async index ({ }) {
-    const acidente = Acidente.all()
-    return acidente
+  async index ({request }) {
+    const { page } = request.get()
+    const acidentes = await Acidente.query().paginate(page)
+    return acidentes
 
   }
 
