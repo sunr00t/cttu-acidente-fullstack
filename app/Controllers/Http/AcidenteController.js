@@ -6,15 +6,20 @@
 
 const Acidente = use("App/Models/Acidente");
 
+
 class AcidenteController {
   /**
    * Listar Todos os Acidente
    * GET acidentes
    */
-  async index({ request }) {
+  async index({ request, response, view }) {
+    const type = request.accepts(['json', 'html'])
     const { page } = request.get();
     const acidentes = await Acidente.query().paginate(page);
-    return acidentes;
+    if (type === 'json'){
+      return acidentes
+    }
+    return view.render('index', { acidentes })
   }
 
   /**

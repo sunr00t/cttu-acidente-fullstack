@@ -7,11 +7,16 @@ Cttu-Acidentes - Front Basico + API
 @section('content')
   <h1>Todos os Acidentes</h1>
 
+  @each(acidente in acidentes)
   <div class="acidentes-container">
     <div class="blank"></div>
     <div class="acidente-info">
-      <h3>Status</h3>
-      <p>Local</p>
+      <h3>{{ acidente.situacao }}</h3>
+      <p>Tipo: {{ acidente.tipo }}<p>
+      <p>Endereço: {{ acidente.endereco }}</p>
+      <span>vítimas fatais: </span> <b>{{ acidente.vitimasfatais }}</b>
     </div>
   </div>
+  @endeach
+
 @endsection
