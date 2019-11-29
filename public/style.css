@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
-
-/***** Tabela de Cores
-azul: rgba(7, 106, 198, 1);
-verde: rgba(0, 167, 82, 1);
-amarelo: rgba(253, 223, 25, 1);
-*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
 
 html, body {
   height: 100%;
@@ -14,36 +8,65 @@ html, body {
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  background-color: white;
+  background-color: #EFEFEF;
 }
 
-h1 {
-  margin-top: 1%;
-  padding-left: 10px;
-  font-family: 'Montserrat', sans-serif;
-  color: black;
-  text-align: left;
-  font-weight: bold;
-  margin-bottom: 1%;
-}
-
-p {
-  font-family: 'Montserrat', sans-serif;
-  color: black;
-  text-align: justify;
-  font-weight: normal;
-  padding-left: 20px;
-}
 * {
   margin: 0;
   padding: 0;
 }
-
-.top-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5050;
+ul {
+  list-style-type: none;
 }
 
+header {
+  background-color: #303C49;
+  display: grid;
+  grid-template-columns: 30% auto;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#logo {
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1.5em 0 0 2em;
+  margin: 0;
+}
+nav {
+  justify-self: right;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li a {
+  padding: 2em;
+  display: inline-block;
+}
+nav ul li a:hover {
+  background: #455668;
+}
+.container {
+  width: calc(100% - 4em);
+  padding: 2em;
+  margin-top: 2em;
+}
+h1 {
+  margin-bottom: 1em;
+}
+.acidentes-container, .acidentes-container2 {
+  background: white;
+  border-radius: 7px;
+  padding: 1em;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 120px auto;
+}
+.blank {
+  width: 100px;
+  height: 100px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}

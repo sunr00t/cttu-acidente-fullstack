@@ -5,7 +5,7 @@ const Route = use('Route')
 
 // Rotas de Client
 Route.get('/', ({ view }) =>{
-  return view.render('welcome')
+  return view.render('index')
 })
 
 Route.group( () =>{
