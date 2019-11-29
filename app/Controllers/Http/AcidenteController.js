@@ -14,12 +14,12 @@ class AcidenteController {
    */
   async index({ request, response, view }) {
     const type = request.accepts(['json', 'html'])
-    const { page } = request.get();
-    const acidentes = await Acidente.query().paginate(page);
+    //const { page } = request.get();
+    const acidentes = await Acidente.all()
     if (type === 'json'){
       return acidentes
     }
-    return view.render('index', { acidentes })
+    return view.render('index', { acidentes: acidentes.toJSON() })
   }
 
   /**
