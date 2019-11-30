@@ -5,19 +5,28 @@ Cttu-Acidentes - Front Basico + API
 @endsection
 
 @section('content')
-  <h1>Todos os Acidentes</h1>
+  <h1>Todos os Registro de Acidentes</h1>
 
-  @each(acidente in acidentes)
-  <div class="acidentes-container">
-    <div class="blank"></div>
-    <div class="acidente-info">
-      <h3>{{ acidente.situacao }}</h3>
-      <p>Tipo: {{ acidente.tipo }}<p>
-      <p>Endereço: {{ acidente.endereco }}</p>
-      <span>vítimas fatais: </span> <b>{{ acidente.vitimasfatais }}</b>
-
+  <div>
+    <div class="row">
+        @each(acidente in acidentes)
+        <div class="col-md" style="padding-top: 30px">
+            <div class="card" style="width:30rem" >
+                <div class="card-body">
+                  <h5 class="card-title">Situação: {{ acidente.situacao }}</h5>
+                  <h6 class="card-subtitle">Tipo: {{ acidente.tipo }}</h6>
+                  <p class="card-text">End.: {{ acidente.endereco }}, {{acidente.numero}} </p>
+                  <p class="card-text">Horário: {{ acidente.hora }}</p>
+                  <p class="card-text">Bairro: {{ acidente.bairro }}</p>
+                  <p class="card-text">Vitimas: {{ acidente.vitimasfatais }}</p>
+                  <button type="button" class="btn pull-right btn-primary">Update</button>
+                  <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+              </div>
+        </div>
+        @endeach
     </div>
-  </div>
-  @endeach
+  <div>
+
 
 @endsection
