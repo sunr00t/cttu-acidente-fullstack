@@ -25,4 +25,4 @@ Disponibilizado no site [Dados Recife - CTTU](http://dados.recife.pe.gov.br/data
 
 ### Documentação
 
-Utilizado o Recurso Documenter do [Postman](https://documenter.getpostman.com/view/3856777/SVzxZL5G?version=latest#69623e7f-b518-4580-9a33-33b0dbdc3601)
+Utilizado o Recurso Documenter do [Postman](https://documenter.getpostman.com/view/3856777/SVzxZL5G?version=latest)
